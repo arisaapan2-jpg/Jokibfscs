@@ -3,175 +3,136 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Joki Blox Fruit</title>
+  <title>Joki Blox Fruit - Firly</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Segoe UI',sans-serif; background:#0d0d1a; color:#fff; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',sans-serif;background:#0d0d1a;color:#fff;}
 
-    nav {
-      background:#111; padding:16px 40px;
-      display:flex; justify-content:space-between; align-items:center;
-      border-bottom:2px solid #7c3aed;
-    }
-    .logo { font-size:24px; font-weight:800; color:#a78bfa; }
-    .tagline { font-size:13px; color:#888; }
+    nav{background:#111;padding:16px 30px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #7c3aed;}
+    .logo{font-size:22px;font-weight:800;color:#a78bfa;}
+    .online{font-size:12px;color:#4ade80;}
 
-    .hero {
-      text-align:center; padding:80px 20px 50px;
-      background:linear-gradient(135deg,#1a1a2e,#16213e);
-    }
-    .hero h1 { font-size:42px; font-weight:800; margin-bottom:12px; }
-    .hero h1 span { color:#a78bfa; }
-    .hero p { color:#aaa; font-size:16px; margin-bottom:10px; }
-    .badge {
-      display:inline-block; background:#7c3aed; color:#fff;
-      padding:6px 18px; border-radius:20px; font-size:13px; margin-top:10px;
-    }
+    .hero{text-align:center;padding:60px 20px 40px;background:linear-gradient(135deg,#1a1a2e,#16213e);}
+    .hero h1{font-size:36px;font-weight:800;margin-bottom:10px;}
+    .hero h1 span{color:#a78bfa;}
+    .hero p{color:#aaa;font-size:15px;margin-bottom:10px;}
+    .badge{display:inline-block;background:#7c3aed;color:#fff;padding:5px 16px;border-radius:20px;font-size:12px;margin-top:8px;}
 
-    /* DEVICE CODE SECTION */
-    .code-section {
-      max-width:500px; margin:40px auto; background:#1a1a2e;
-      border:1px solid #2a2a4a; border-radius:14px; padding:30px; text-align:center;
-    }
-    .code-section h2 { font-size:20px; margin-bottom:8px; color:#a78bfa; }
-    .code-section p { color:#aaa; font-size:14px; margin-bottom:20px; }
-    .device-code {
-      background:#0d0d1a; border:2px dashed #7c3aed;
-      border-radius:10px; padding:20px; font-size:28px;
-      font-weight:800; letter-spacing:8px; color:#a78bfa;
-      margin-bottom:20px;
-    }
-    .code-input {
-      width:100%; padding:12px; border-radius:8px;
-      border:1px solid #7c3aed; background:#111; color:#fff;
-      font-size:18px; text-align:center; letter-spacing:4px;
-      margin-bottom:12px;
-    }
-    .btn-verify {
-      background:#7c3aed; color:#fff; border:none;
-      padding:12px 30px; border-radius:8px; font-size:15px;
-      cursor:pointer; width:100%; transition:background 0.3s;
-    }
-    .btn-verify:hover { background:#6d28d9; }
+    /* KODE DEVICE */
+    .code-box{max-width:440px;margin:30px auto;background:#1a1a2e;border:1px solid #2a2a4a;border-radius:14px;padding:26px;text-align:center;}
+    .code-box h2{font-size:18px;color:#a78bfa;margin-bottom:6px;}
+    .code-box p{color:#888;font-size:13px;margin-bottom:16px;}
+    .kode-display{background:#0d0d1a;border:2px dashed #7c3aed;border-radius:10px;padding:16px;font-size:30px;font-weight:800;letter-spacing:8px;color:#a78bfa;margin-bottom:16px;}
+    .code-input{width:100%;padding:11px;border-radius:8px;border:1px solid #7c3aed;background:#111;color:#fff;font-size:18px;text-align:center;letter-spacing:4px;margin-bottom:10px;}
+    .btn-ok{background:#7c3aed;color:#fff;border:none;padding:11px 0;border-radius:8px;width:100%;font-size:15px;cursor:pointer;}
+    .btn-ok:hover{background:#6d28d9;}
 
     /* LAYANAN */
-    .layanan { padding:60px 20px; max-width:1000px; margin:0 auto; }
-    .layanan h2 { text-align:center; font-size:28px; margin-bottom:8px; }
-    .layanan .sub { text-align:center; color:#888; margin-bottom:40px; font-size:14px; }
+    .layanan{padding:50px 16px;max-width:960px;margin:0 auto;display:none;}
+    .layanan h2{text-align:center;font-size:26px;margin-bottom:6px;}
+    .sub{text-align:center;color:#888;font-size:13px;margin-bottom:30px;}
+    .cards{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;}
+    .card{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:14px;padding:22px;width:260px;transition:transform .3s,border-color .3s;}
+    .card:hover{transform:translateY(-4px);border-color:#a78bfa;}
+    .card .icon{font-size:28px;margin-bottom:10px;}
+    .card h3{font-size:16px;margin-bottom:6px;color:#e2e8f0;}
+    .harga{color:#a78bfa;font-weight:700;font-size:14px;margin-bottom:12px;}
+    .card ul{list-style:none;font-size:12px;color:#aaa;margin-bottom:14px;}
+    .card ul li::before{content:"✓ ";color:#7c3aed;}
+    .card ul li{margin-bottom:5px;}
+    .btn-pesan{background:#7c3aed;color:#fff;border:none;padding:9px 0;border-radius:8px;width:100%;font-size:13px;cursor:pointer;}
+    .btn-pesan:hover{background:#6d28d9;}
 
-    .cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-    .card {
-      background:#1a1a2e; border:1px solid #2a2a4a;
-      border-radius:14px; padding:26px; width:280px;
-      transition:transform 0.3s,border-color 0.3s;
-    }
-    .card:hover { transform:translateY(-5px); border-color:#a78bfa; }
-    .card .icon { font-size:32px; margin-bottom:12px; }
-    .card h3 { font-size:17px; margin-bottom:8px; color:#e2e8f0; }
-    .card .harga { color:#a78bfa; font-weight:700; font-size:15px; margin-bottom:14px; }
-    .card ul { list-style:none; font-size:13px; color:#aaa; margin-bottom:18px; }
-    .card ul li::before { content:"✓ "; color:#7c3aed; }
-    .card ul li { margin-bottom:6px; }
-    .btn-pesan {
-      background:#7c3aed; color:#fff; border:none;
-      padding:10px 0; border-radius:8px; width:100%;
-      font-size:14px; cursor:pointer; transition:background 0.3s;
-    }
-    .btn-pesan:hover { background:#6d28d9; }
+    /* PEMBAYARAN */
+    .payment{max-width:480px;margin:0 auto 50px;background:#1a1a2e;border:1px solid #2a2a4a;border-radius:14px;padding:28px;text-align:center;display:none;}
+    .payment h2{font-size:20px;color:#a78bfa;margin-bottom:6px;}
+    .nominal{font-size:30px;font-weight:800;margin:14px 0;}
+    .pay-tabs{display:flex;gap:10px;justify-content:center;margin:16px 0;}
+    .pay-tab{background:#111;border:1px solid #7c3aed;color:#a78bfa;padding:9px 22px;border-radius:8px;cursor:pointer;font-size:13px;}
+    .pay-tab.active,.pay-tab:hover{background:#7c3aed;color:#fff;}
+    .pay-box{background:#0d0d1a;border-radius:10px;padding:18px;margin-top:14px;}
 
-    /* PAYMENT */
-    .payment {
-      max-width:500px; margin:0 auto 60px;
-      background:#1a1a2e; border:1px solid #2a2a4a;
-      border-radius:14px; padding:30px; text-align:center;
-      display:none;
-    }
-    .payment.show { display:block; }
-    .payment h2 { font-size:22px; margin-bottom:6px; color:#a78bfa; }
-    .payment .nominal {
-      font-size:32px; font-weight:800; color:#fff; margin:16px 0;
-    }
-    .pay-method {
-      display:flex; gap:12px; justify-content:center; margin:20px 0;
-    }
-    .pay-btn {
-      background:#111; border:1px solid #7c3aed; color:#a78bfa;
-      padding:10px 20px; border-radius:8px; cursor:pointer;
-      font-size:14px; transition:background 0.3s;
-    }
-    .pay-btn.active, .pay-btn:hover { background:#7c3aed; color:#fff; }
-    .pay-info {
-      background:#0d0d1a; border-radius:10px; padding:20px;
-      margin-top:16px; font-size:15px;
-    }
-    .pay-info .nomor { font-size:22px; font-weight:700; color:#a78bfa; margin:8px 0; }
-    .pay-info .nama { color:#888; font-size:13px; }
-    .pay-info .owner {
-      margin-top:14px; padding-top:14px;
-      border-top:1px solid #2a2a4a; font-size:13px; color:#aaa;
-    }
-    .pay-info .owner strong { color:#fff; }
+    /* QR */
+    .qr-wrap{margin:12px auto;width:180px;height:180px;background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+    .qr-wrap img{width:100%;height:100%;object-fit:contain;}
 
-    footer {
-      text-align:center; padding:24px;
-      background:#0a0a0a; color:#555; font-size:13px;
-      border-top:1px solid #1a1a1a;
-    }
+    .nomor{font-size:20px;font-weight:700;color:#a78bfa;margin:8px 0;}
+    .nama{color:#888;font-size:12px;}
+    .owner-box{margin-top:14px;padding-top:14px;border-top:1px solid #2a2a4a;font-size:13px;color:#aaa;}
+    .wa-btn{display:inline-block;margin-top:10px;background:#25D366;color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;}
+
+    /* STATUS BOT */
+    .status-section{max-width:480px;margin:0 auto 40px;background:#1a1a2e;border:1px solid #2a2a4a;border-radius:14px;padding:24px;text-align:center;display:none;}
+    .status-section h3{color:#a78bfa;margin-bottom:16px;}
+    .status-box{background:#0d0d1a;border-radius:10px;padding:20px;font-size:14px;}
+    .status-label{font-size:13px;color:#888;margin-bottom:8px;}
+    .status-val{font-size:22px;font-weight:700;margin-bottom:6px;}
+    .status-val.menunggu{color:#facc15;}
+    .status-val.lunas{color:#4ade80;}
+    .progress-bar{background:#1f1f3a;border-radius:999px;height:8px;margin:10px 0;}
+    .progress-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#7c3aed,#a78bfa);transition:width 2s;}
+    .status-note{font-size:12px;color:#888;margin-top:10px;}
+    .notif-box{margin-top:16px;background:#0f2e0f;border:1px solid #4ade80;border-radius:10px;padding:14px;display:none;}
+    .notif-box p{color:#4ade80;font-size:14px;}
+
+    footer{text-align:center;padding:20px;background:#0a0a0a;color:#555;font-size:12px;}
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">🎮 JokiBF</div>
-  <div class="tagline">Joki Blox Fruit Terpercaya</div>
+  <div class="logo">🎮 JokiBF Firly</div>
+  <div class="online">● Online</div>
 </nav>
 
 <section class="hero">
-  <h1>Joki <span>Blox Fruit</span> Pro</h1>
-  <p>Grinding level, race, stat reset — cepat, aman, dan terpercaya</p>
-  <span class="badge">⚡ Proses 1–24 Jam</span>
+  <h1>Joki <span>Blox Fruit</span></h1>
+  <p>Grinding level, Race, Stat Reset & lebih banyak lagi!</p>
+  <span class="badge">⚡ Proses Cepat & Terpercaya</span>
 </section>
 
 <!-- KODE DEVICE -->
-<div class="code-section">
+<div class="code-box">
   <h2>🔑 Verifikasi Device</h2>
-  <p>Kode device kamu hari ini:</p>
-  <div class="device-code" id="kodeDevice">----</div>
-  <p style="font-size:13px;color:#888;margin-bottom:16px;">Masukkan kode di bawah untuk lanjut pesan:</p>
-  <input class="code-input" type="text" id="inputKode" placeholder="Masukkan kode" maxlength="6"/>
-  <button class="btn-verify" onclick="verifyCode()">Verifikasi →</button>
-  <p id="pesanVerif" style="margin-top:12px;font-size:13px;color:#f87171;"></p>
+  <p>Kode akses kamu hari ini:</p>
+  <div class="kode-display" id="kodeDevice">------</div>
+  <p style="font-size:12px;color:#888;margin-bottom:12px;">Masukkan kode di bawah untuk lanjut:</p>
+  <input class="code-input" id="inputKode" type="text" placeholder="Masukkan kode" maxlength="6"/>
+  <button class="btn-ok" onclick="verif()">Verifikasi →</button>
+  <p id="msgVerif" style="margin-top:10px;font-size:13px;"></p>
 </div>
 
 <!-- LAYANAN -->
-<div class="layanan" id="sectionLayanan" style="display:none;">
-  <h2>🎯 Pilih Layanan</h2>
-  <p class="sub">Klik layanan yang kamu mau, lalu lakukan pembayaran</p>
+<div class="layanan" id="secLayanan">
+  <h2>🎯 Pilih Layanan Joki</h2>
+  <p class="sub">Semua harga sudah termasuk garansi selesai</p>
   <div class="cards">
 
     <div class="card">
       <div class="icon">⚔️</div>
       <h3>Grinding Level</h3>
-      <div class="harga">Mulai Rp 15.000</div>
+      <div class="harga">Mulai Rp 5.000</div>
       <ul>
-        <li>1–100 Level: Rp 15.000</li>
-        <li>101–500 Level: Rp 35.000</li>
-        <li>501–1000 Level: Rp 60.000</li>
-        <li>1001–2450 Level: Rp 100.000</li>
+        <li>1–100 Lvl: Rp 5.000</li>
+        <li>101–300 Lvl: Rp 12.000</li>
+        <li>301–600 Lvl: Rp 25.000</li>
+        <li>601–1000 Lvl: Rp 40.000</li>
+        <li>1001–1500 Lvl: Rp 65.000</li>
+        <li>1501–2450 Lvl: Rp 100.000</li>
       </ul>
-      <button class="btn-pesan" onclick="pilihLayanan('Grinding Level','Rp 15.000 s/d Rp 100.000')">Pesan Sekarang</button>
+      <button class="btn-pesan" onclick="pesan('Grinding Level','Sesuai range level')">Pesan</button>
     </div>
 
     <div class="card">
       <div class="icon">🌊</div>
-      <h3>Race V4</h3>
+      <h3>Race V4 Unlock</h3>
       <div class="harga">Rp 75.000</div>
       <ul>
-        <li>Race unlock semua ras</li>
-        <li>Proses cepat & aman</li>
+        <li>Unlock semua ras</li>
+        <li>Proses cepat</li>
         <li>Garansi selesai</li>
       </ul>
-      <button class="btn-pesan" onclick="pilihLayanan('Race V4','Rp 75.000')">Pesan Sekarang</button>
+      <button class="btn-pesan" onclick="pesan('Race V4','Rp 75.000')">Pesan</button>
     </div>
 
     <div class="card">
@@ -183,95 +144,207 @@
         <li>Build sesuai request</li>
         <li>Proses &lt; 1 jam</li>
       </ul>
-      <button class="btn-pesan" onclick="pilihLayanan('Stat Reset','Rp 10.000')">Pesan Sekarang</button>
+      <button class="btn-pesan" onclick="pesan('Stat Reset','Rp 10.000')">Pesan</button>
     </div>
 
     <div class="card">
       <div class="icon">🏆</div>
-      <h3>Boss Hunt / Quest</h3>
+      <h3>Boss Hunt</h3>
       <div class="harga">Rp 20.000</div>
       <ul>
         <li>Hunt boss tertentu</li>
-        <li>Selesaikan quest sulit</li>
         <li>Drop item incl.</li>
+        <li>Garansi selesai</li>
       </ul>
-      <button class="btn-pesan" onclick="pilihLayanan('Boss Hunt / Quest','Rp 20.000')">Pesan Sekarang</button>
+      <button class="btn-pesan" onclick="pesan('Boss Hunt','Rp 20.000')">Pesan</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🍎</div>
+      <h3>Fruit Hunting</h3>
+      <div class="harga">Rp 25.000</div>
+      <ul>
+        <li>Cari buah langka</li>
+        <li>Request buah tertentu</li>
+        <li>Garansi dapat</li>
+      </ul>
+      <button class="btn-pesan" onclick="pesan('Fruit Hunting','Rp 25.000')">Pesan</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌀</div>
+      <h3>Awakening</h3>
+      <div class="harga">Rp 30.000</div>
+      <ul>
+        <li>Awakening buah devil</li>
+        <li>Semua buah bisa</li>
+        <li>Proses &lt; 3 jam</li>
+      </ul>
+      <button class="btn-pesan" onclick="pesan('Awakening','Rp 30.000')">Pesan</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🗡️</div>
+      <h3>PvP Training</h3>
+      <div class="harga">Rp 35.000</div>
+      <ul>
+        <li>Training PvP 1 sesi</li>
+        <li>Tips & trik combo</li>
+        <li>1 jam sesi</li>
+      </ul>
+      <button class="btn-pesan" onclick="pesan('PvP Training','Rp 35.000')">Pesan</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">📜</div>
+      <h3>Quest Selesai</h3>
+      <div class="harga">Rp 15.000</div>
+      <ul>
+        <li>Selesaikan quest sulit</li>
+        <li>All sea tersedia</li>
+        <li>Garansi clear</li>
+      </ul>
+      <button class="btn-pesan" onclick="pesan('Quest Selesai','Rp 15.000')">Pesan</button>
     </div>
 
   </div>
 </div>
 
 <!-- PEMBAYARAN -->
-<div class="payment" id="sectionPayment">
+<div class="payment" id="secPayment">
   <h2>💳 Pembayaran</h2>
-  <p id="namaLayanan" style="color:#aaa;font-size:14px;"></p>
-  <div class="nominal" id="nominalHarga"></div>
+  <p id="lblLayanan" style="color:#aaa;font-size:13px;"></p>
+  <div class="nominal" id="lblHarga"></div>
 
-  <div class="pay-method">
-    <button class="pay-btn active" onclick="pilihMetode('dana',this)">Dana</button>
-    <button class="pay-btn" onclick="pilihMetode('gopay',this)">GoPay</button>
+  <div class="pay-tabs">
+    <button class="pay-tab active" onclick="tabPay('dana',this)">Dana</button>
+    <button class="pay-tab" onclick="tabPay('gopay',this)">GoPay</button>
   </div>
 
-  <div class="pay-info">
-    <div id="metodeTeks" style="color:#aaa;font-size:13px;">Transfer via Dana ke:</div>
-    <div class="nomor">085194654911</div>
-    <div class="nama">a/n Owner JokiBF</div>
-    <div class="owner">
-      Setelah transfer, hubungi owner:<br/>
-      <strong>📱 085194654911</strong><br/>
-      <span style="color:#a78bfa;">WhatsApp / SMS</span>
+  <div class="pay-box">
+    <p id="lblMetode" style="color:#aaa;font-size:12px;margin-bottom:8px;">Transfer via Dana ke:</p>
+
+    <!-- QR DANA -->
+    <div id="qrDana">
+      <div class="qr-wrap">
+        <!-- Ganti src dengan gambar QR Dana kamu -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=dana://085194654911" alt="QR Dana"/>
+      </div>
+      <div class="nomor">085194654911</div>
+      <div class="nama">a.n FIRLY (Dana)</div>
+    </div>
+
+    <!-- QR GOPAY -->
+    <div id="qrGopay" style="display:none;">
+      <div class="qr-wrap">
+        <!-- Ganti src dengan gambar QR GoPay kamu -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=gopay://085194654911" alt="QR GoPay"/>
+      </div>
+      <div class="nomor">085194654911</div>
+      <div class="nama">a.n FIRLY (GoPay)</div>
+    </div>
+
+    <div class="owner-box">
+      Setelah bayar, hubungi owner via WA:<br/>
+      <a class="wa-btn" id="waLink" href="https://wa.me/6285194654911" target="_blank">💬 Chat Owner WhatsApp</a>
+    </div>
+  </div>
+
+  <button onclick="cekPembayaran()" style="margin-top:18px;background:#facc15;color:#000;border:none;padding:11px 0;border-radius:8px;width:100%;font-size:14px;font-weight:700;cursor:pointer;">🔍 Saya Sudah Bayar</button>
+</div>
+
+<!-- STATUS BOT -->
+<div class="status-section" id="secStatus">
+  <h3>🤖 Status Pembayaran</h3>
+  <div class="status-box">
+    <div class="status-label">Status:</div>
+    <div class="status-val menunggu" id="statusVal">⏳ Mengecek Pembayaran...</div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="status-note" id="statusNote">Bot sedang memverifikasi pembayaran kamu, tunggu sebentar...</div>
+    <div class="notif-box" id="notifLunas">
+      <p>✅ Pembayaran <strong>LUNAS</strong>! Joki kamu sedang diproses.<br/>Owner akan segera menghubungi kamu via WA.</p>
     </div>
   </div>
 </div>
 
-<footer>
-  © 2026 JokiBF — Joki Blox Fruit Terpercaya 🎮
-</footer>
+<footer>© 2026 JokiBF Firly — Blox Fruit Terpercaya 🎮</footer>
 
 <script>
-  // Generate kode device unik per sesi
-  function generateKode() {
-    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-    let kode = '';
-    for(let i=0;i<6;i++) kode += chars[Math.floor(Math.random()*chars.length)];
-    return kode;
-  }
+  // Generate kode unik per sesi
+  const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let kodeAsli='';
+  for(let i=0;i<6;i++) kodeAsli+=chars[Math.floor(Math.random()*chars.length)];
+  document.getElementById('kodeDevice').innerText=kodeAsli;
 
-  const kodeAsli = generateKode();
-  document.getElementById('kodeDevice').innerText = kodeAsli;
-
-  function verifyCode() {
-    const input = document.getElementById('inputKode').value.toUpperCase().trim();
-    const pesan = document.getElementById('pesanVerif');
-    if(input === kodeAsli) {
-      pesan.style.color = '#4ade80';
-      pesan.innerText = '✅ Verifikasi berhasil! Pilih layanan di bawah.';
-      document.getElementById('sectionLayanan').style.display = 'block';
-      setTimeout(()=>{
-        document.getElementById('sectionLayanan').scrollIntoView({behavior:'smooth'});
-      }, 300);
+  function verif(){
+    const v=document.getElementById('inputKode').value.toUpperCase().trim();
+    const msg=document.getElementById('msgVerif');
+    if(v===kodeAsli){
+      msg.style.color='#4ade80';
+      msg.innerText='✅ Berhasil! Pilih layanan di bawah.';
+      document.getElementById('secLayanan').style.display='block';
+      setTimeout(()=>document.getElementById('secLayanan').scrollIntoView({behavior:'smooth'}),300);
     } else {
-      pesan.style.color = '#f87171';
-      pesan.innerText = '❌ Kode salah, coba lagi.';
+      msg.style.color='#f87171';
+      msg.innerText='❌ Kode salah, coba lagi.';
     }
   }
 
-  function pilihLayanan(nama, harga) {
-    document.getElementById('namaLayanan').innerText = 'Layanan: ' + nama;
-    document.getElementById('nominalHarga').innerText = harga;
-    const sec = document.getElementById('sectionPayment');
-    sec.classList.add('show');
-    setTimeout(()=>{ sec.scrollIntoView({behavior:'smooth'}); }, 300);
+  let layananDipilih='';
+  let hargaDipilih='';
+
+  function pesan(nama,harga){
+    layananDipilih=nama;
+    hargaDipilih=harga;
+    document.getElementById('lblLayanan').innerText='Layanan: '+nama;
+    document.getElementById('lblHarga').innerText=harga;
+
+    // Update pesan WA otomatis
+    const pesenWA=encodeURIComponent('Halo Firly! Saya mau order joki:\nLayanan: '+nama+'\nHarga: '+harga+'\nMohon konfirmasinya ya!');
+    document.getElementById('waLink').href='https://wa.me/6285194654911?text='+pesenWA;
+
+    const sec=document.getElementById('secPayment');
+    sec.style.display='block';
+    setTimeout(()=>sec.scrollIntoView({behavior:'smooth'}),300);
   }
 
-  function pilihMetode(metode, el) {
-    document.querySelectorAll('.pay-btn').forEach(b=>b.classList.remove('active'));
+  function tabPay(m,el){
+    document.querySelectorAll('.pay-tab').forEach(b=>b.classList.remove('active'));
     el.classList.add('active');
-    const teks = document.getElementById('metodeTeks');
-    if(metode==='dana') teks.innerText = 'Transfer via Dana ke:';
-    else teks.innerText = 'Transfer via GoPay ke:';
+    document.getElementById('lblMetode').innerText='Transfer via '+(m==='dana'?'Dana':'GoPay')+' ke:';
+    document.getElementById('qrDana').style.display=m==='dana'?'block':'none';
+    document.getElementById('qrGopay').style.display=m==='gopay'?'block':'none';
+  }
+
+  function cekPembayaran(){
+    const sec=document.getElementById('secStatus');
+    sec.style.display='block';
+    setTimeout(()=>sec.scrollIntoView({behavior:'smooth'}),300);
+
+    // Simulasi bot cek (2 menit = 120 detik)
+    let elapsed=0;
+    const total=120;
+    const fill=document.getElementById('progressFill');
+    const val=document.getElementById('statusVal');
+    const note=document.getElementById('statusNote');
+
+    const interval=setInterval(()=>{
+      elapsed+=1;
+      const pct=Math.min((elapsed/total)*100,100);
+      fill.style.width=pct+'%';
+
+      if(elapsed<total){
+        const sisa=total-elapsed;
+        note.innerText='Memverifikasi... (~'+sisa+' detik lagi)';
+      } else {
+        clearInterval(interval);
+        val.className='status-val lunas';
+        val.innerText='✅ LUNAS!';
+        note.innerText='Pembayaran dikonfirmasi oleh bot.';
+        document.getElementById('notifLunas').style.display='block';
+      }
+    },1000);
   }
 </script>
-
 </body>
-</html>
+  </html>
